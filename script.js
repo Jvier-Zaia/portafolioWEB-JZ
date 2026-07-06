@@ -8,9 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!rowNumbersContainer) return;
         
         rowNumbersContainer.innerHTML = '';
-        // Generamos 500 filas por defecto para simular una hoja de cálculo real
-        // y evitar que se corte prematuramente al cargar la página.
-        for (let i = 1; i <= 500; i++) {
+        // Generamos exactamente 55 filas
+        for (let i = 1; i <= 55; i++) {
             const rowDiv = document.createElement('div');
             rowDiv.className = 'row-number';
             rowDiv.textContent = i;

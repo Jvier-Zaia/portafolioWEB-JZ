@@ -198,7 +198,7 @@ body {
     /* Contenido Estilizado como Celdas Retro */
     .cv-content {
         flex-grow: 1;
-        min-height: calc(500 * 35px); /* Forza la grilla a bajar 500 filas igual que los números */
+        height: calc(55 * 35px); /* Forza la grilla a terminar exactamente en la fila 55 */
         background-color: var(--excel-cell-bg);
         background-image: 
             linear-gradient(#c0c0c0 1px, transparent 1px),
