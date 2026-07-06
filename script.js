@@ -8,8 +8,8 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!rowNumbersContainer) return;
         
         rowNumbersContainer.innerHTML = '';
-        // Generamos exactamente 55 filas
-        for (let i = 1; i <= 55; i++) {
+        // Generamos exactamente 100 filas
+        for (let i = 1; i <= 100; i++) {
             const rowDiv = document.createElement('div');
             rowDiv.className = 'row-number';
             rowDiv.textContent = i;
