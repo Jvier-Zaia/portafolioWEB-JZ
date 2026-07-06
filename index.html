@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javier Zaia - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Fuente típica de interfaces de oficina -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- INTERFAZ EXCEL (Solo visible en pantalla) -->
+    <div class="excel-ui-header screen-only">
+        <div class="window-title-bar">
+            <span>Microsoft Excel - CV_Javier_Zaia.xls</span>
+            <div class="window-controls">
+                <a href="index-en.html" class="win95-button" style="text-decoration:none; color:black; margin-right: 15px;">🇬🇧 English</a>
+                <button class="win95-button">_</button>
+                <button class="win95-button">□</button>
+                <button class="win95-button">X</button>
+            </div>
+        </div>
+        <div class="ribbon">
+            <div class="ribbon-tab active">Archivo</div>
+            <div class="ribbon-tab">Edición</div>
+            <div class="ribbon-tab">Ver</div>
+            <div class="ribbon-tab">Insertar</div>
+            <div class="ribbon-tab">Formato</div>
+        </div>
+        <div class="formula-bar">
+            <div class="cell-name">A1</div>
+            <div class="fx-icon">fx</div>
+            <div class="formula-input">=BUSCAR_TALENTO("Desarrollador C#"; "Javier Zaia")</div>
+        </div>
+        <div class="col-headers">
+            <div class="corner"></div>
+            <div class="col-header">A</div>
+            <div class="col-header">B</div>
+            <div class="col-header">C</div>
+            <div class="col-header">D</div>
+            <div class="col-header">E</div>
+            <div class="col-header">F</div>
+            <div class="col-header">G</div>
+        </div>
+    </div>
+
+    <div class="excel-grid">
+        <!-- Columna de números dinámica -->
+        <div class="row-numbers screen-only" id="rowNumbers">
+            <!-- Se llenará con JavaScript para que no quede espacio gris -->
+        </div>
+
+        <!-- CONTENIDO REAL (CV ATS-Friendly) -->
+        <main class="cv-content">
+            <header class="sheet-section">
+                <h1>Javier Zaia</h1>
+                <h2>Desarrollador Full Stack</h2>
+                <address>
+                    San Miguel de Tucumán, Argentina<br>
+                    <a href="mailto:zaiajavier1@gmail.com">zaiajavier1@gmail.com</a> |
+                    <a href="https://github.com/Jvier-Zaia" target="_blank">GitHub: Jvier-Zaia</a>
+                </address>
+            </header>
+
+            <section id="perfil" class="sheet-section">
+                <h3>Resumen Profesional</h3>
+                <p>Desarrollador Full Stack y estudiante de la Tecnicatura Universitaria en Programación (TUP) en la UTN. Experiencia en el desarrollo de aplicaciones multiplataforma, sistemas de escritorio empresariales (POS) y automatización (RPA). Orientado a la resolución de problemas de negocio a través de arquitecturas escalables en Python, C# (.NET) y tecnologías web modernas. Con experiencia previa en atención al cliente y gestión de caja, lo que me ha proporcionado una sólida base en resolución de problemas en tiempo real y entendimiento de la lógica comercial aplicada al software.</p>
+            </section>
+
+            <section id="habilidades" class="sheet-section">
+                <h3>Habilidades Técnicas</h3>
+                <ul>
+                    <li><strong>Lenguajes de Programación:</strong> Python, C#, TypeScript, JavaScript, SQL.</li>
+                    <li><strong>Backend & Bases de Datos:</strong> .NET, Node.js, FastAPI, SQLite, Pandas.</li>
+                    <li><strong>Frontend & UI:</strong> React, Tailwind CSS, Bootstrap, HTML/CSS, Avalonia UI, Android.</li>
+                    <li><strong>Herramientas & Conceptos:</strong> Git, Web Scraping (Selenium, BeautifulSoup), RPA, Control PID, POO, Patrones de Diseño.</li>
+                    <li><strong>Idiomas:</strong> Inglés (Nivel B1+).</li>
+                </ul>
+            </section>
+
+            <section id="proyectos" class="sheet-section">
+                <h3>Proyectos de Software Destacados</h3>
+                <article>
+                    <h4>P3 Player </h4>
+                    <p><em>Tecnologías: C#, .NET, Avalonia UI, Android</em></p>
+                    <ul>
+                        <li>Desarrollé un reproductor multimedia nativo para Android con generación procedural de gráficos (nebulosas) en tiempo real.</li>
+                        <li>Diseñé servicios de primer plano (Foreground Services) nativos (Media3) para garantizar la reproducción continua en segundo plano y el control mediante notificaciones con pantalla bloqueada.</li>
+                        <li>Implementé la interfaz de usuario con controles de reproducción personalizados utilizando Avalonia UI sobre el ecosistema .NET.</li>
+                    </ul>
+                </article>
+                
+                <article>
+                    <h4>Sistema POS & Gestión Contable</h4>
+                    <p><em>Tecnologías: Python, Tkinter, SQLite, Pandas, Matplotlib</em></p>
+                    <ul>
+                        <li>Creé una aplicación de escritorio integral para la gestión de puntos de venta y control de inventario en entornos empresariales.</li>
+                        <li>Desarrollé un módulo de Business Intelligence integrado que genera gráficos dinámicos y exporta reportes financieros estructurados a Excel.</li>
+                        <li>Optimizé las consultas a base de datos para manejar eficientemente grandes volúmenes de transacciones y datos de proveedores.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h4>Gem SCADA Simulator & Moodle Bot</h4>
+                    <p><em>Tecnologías: Python, Curses, Selenium, RPA</em></p>
+                    <ul>
+                        <li>Diseñé un simulador industrial interactivo ("Digital Twin") basado en consola y un Controlador PID matemático programado desde cero.</li>
+                        <li>Desarrollé un bot de automatización de procesos robóticos (RPA) capaz de navegar plataformas educativas complejas y consolidar materiales de estudio masivamente.</li>
+                    </ul>
+                </article>
+            </section>
+            
+            <section id="experiencia" class="sheet-section">
+                <h3>Experiencia Laboral</h3>
+                <article>
+                    <h4>Atención al Público y Control de Caja</h4>
+                    <p><em>San Miguel de Tucumán</em></p>
+                    <ul>
+                        <li>Responsable de operaciones de caja, arqueos y conciliación diaria, garantizando la precisión en las transacciones financieras.</li>
+                        <li>Atención directa al cliente, resolución de conflictos y optimización de la experiencia de usuario en el punto de venta.</li>
+                        <li>Esta experiencia directa en la operatoria comercial fue clave para el diseño lógico y la interfaz de usuario de mi posterior "Sistema POS & Gestión Contable".</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section id="educacion" class="sheet-section">
+                <h3>Educación</h3>
+                <article>
+                    <h4>Tecnicatura Universitaria en Programación (TUP)</h4>
+                    <p>Universidad Tecnológica Nacional (UTN) | <em>2026 - Presente</em></p>
+                </article>
+                <article>
+                    <h4>Certificación Oficial en Desarrollo Frontend</h4>
+                    <p>Universidad Tecnológica Nacional (UTN) | <em>2025</em></p>
+                    <p><a href="https://validator.centrodeelearning.com/validator/MysMjYEVnL" target="_blank" style="font-weight: 500;">Ver Credencial (Validador UTN) 🔗</a></p>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <!-- Pestañas inferiores (Excel Footer) -->
+    <footer class="excel-footer screen-only">
+        <div class="sheet-tabs">
+            <button class="sheet-tab active">CV_Principal</button>
+            <button class="sheet-tab">Hoja2</button>
+            <button class="sheet-tab">+</button>
+        </div>
+        <div class="zoom-controls">
+            <span>Normal</span>
+            <span>100%</span>
+            <span>- O +</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

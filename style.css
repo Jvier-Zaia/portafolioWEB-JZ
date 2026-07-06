@@ -1,0 +1,316 @@
+/* =========================================
+   VARIABLES GLOBALES (Retro Excel 95 / Win95 Colors)
+   ========================================= */
+:root {
+    --win95-bg: #c0c0c0;
+    --win95-border-light: #ffffff;
+    --win95-border-dark: #808080;
+    --win95-border-black: #000000;
+    --excel-green: #008080; /* Teal clásico de Win95 */
+    --excel-cell-bg: #ffffff;
+    --excel-text: #000000;
+    --excel-selection: #000080; /* Azul oscuro de selección Win95 */
+    --excel-selection-text: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Tipografía retro sin anti-aliasing */
+body {
+    font-family: 'MS Sans Serif', 'Tahoma', 'Verdana', sans-serif;
+    color: var(--excel-text);
+    background-color: var(--win95-bg);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    -webkit-font-smoothing: none;
+}
+
+/* Efecto de borde 3D clásico de Windows 95 */
+.win95-panel {
+    border-top: 2px solid var(--win95-border-light);
+    border-left: 2px solid var(--win95-border-light);
+    border-bottom: 2px solid var(--win95-border-dark);
+    border-right: 2px solid var(--win95-border-dark);
+    background-color: var(--win95-bg);
+}
+
+/* Botón clásico Win95 */
+.win95-button {
+    border-top: 2px solid var(--win95-border-light);
+    border-left: 2px solid var(--win95-border-light);
+    border-bottom: 2px solid var(--win95-border-black);
+    border-right: 2px solid var(--win95-border-black);
+    background-color: var(--win95-bg);
+    color: var(--excel-text);
+    padding: 2px 6px;
+    font-size: 12px;
+    cursor: default;
+}
+.win95-button:active {
+    border-top: 2px solid var(--win95-border-black);
+    border-left: 2px solid var(--win95-border-black);
+    border-bottom: 2px solid var(--win95-border-light);
+    border-right: 2px solid var(--win95-border-light);
+    padding: 3px 5px 1px 7px; /* Efecto de hundimiento */
+}
+
+/* =========================================
+   PANTALLA: INTERFAZ RETRO EXCEL 95
+   ========================================= */
+@media screen {
+    .excel-ui-header {
+        background-color: var(--win95-bg);
+        display: flex;
+        flex-direction: column;
+    }
+
+    /* Barra de título de la ventana (Azul oscuro clásico) */
+    .window-title-bar {
+        background-color: var(--excel-selection);
+        color: white;
+        padding: 3px 5px;
+        font-weight: bold;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 12px;
+    }
+
+    .window-controls {
+        display: flex;
+        gap: 2px;
+    }
+
+    .ribbon {
+        display: flex;
+        align-items: center;
+        padding: 2px;
+        background-color: var(--win95-bg);
+        font-size: 12px;
+        border-bottom: 1px solid var(--win95-border-dark);
+    }
+
+    .ribbon-tab {
+        padding: 2px 8px;
+        cursor: default;
+        color: var(--excel-text);
+    }
+
+    .ribbon-tab:hover {
+        background-color: var(--excel-selection);
+        color: var(--excel-selection-text);
+    }
+
+    .formula-bar {
+        display: flex;
+        background-color: var(--win95-bg);
+        padding: 4px;
+        align-items: center;
+        gap: 5px;
+        border-bottom: 1px solid var(--win95-border-dark);
+    }
+
+    .cell-name {
+        background-color: white;
+        border: 2px inset var(--win95-border-dark);
+        padding: 2px 5px;
+        font-size: 12px;
+        width: 50px;
+        text-align: center;
+    }
+
+    .fx-icon {
+        font-style: italic;
+        font-weight: bold;
+        font-family: serif;
+    }
+
+    .formula-input {
+        background-color: white;
+        border: 2px inset var(--win95-border-dark);
+        flex-grow: 1;
+        padding: 2px 5px;
+        font-family: 'Courier New', Courier, monospace;
+        font-size: 12px;
+    }
+
+    /* Cabeceras de Columnas */
+    .col-headers {
+        display: flex;
+        background-color: var(--win95-bg);
+    }
+
+    .corner {
+        width: 40px;
+        min-width: 40px;
+        border-right: 1px solid var(--win95-border-dark);
+        border-bottom: 1px solid var(--win95-border-dark);
+        background-color: var(--win95-bg);
+    }
+
+    .col-header {
+        flex: 1;
+        min-width: 100px;
+        text-align: center;
+        font-size: 12px;
+        color: var(--excel-text);
+        padding: 2px 0;
+        border-top: 1px solid var(--win95-border-light);
+        border-left: 1px solid var(--win95-border-light);
+        border-bottom: 1px solid var(--win95-border-black);
+        border-right: 1px solid var(--win95-border-black);
+    }
+
+    /* Grilla Principal */
+    .excel-grid {
+        display: flex;
+        flex-grow: 1;
+        overflow: auto;
+        background-color: var(--win95-bg);
+    }
+
+    .row-numbers {
+        width: 40px;
+        min-width: 40px;
+        background-color: var(--win95-bg);
+        display: flex;
+        flex-direction: column;
+    }
+
+    .row-number {
+        height: 35px;
+        text-align: center;
+        font-size: 12px;
+        color: var(--excel-text);
+        line-height: 35px;
+        border-top: 1px solid var(--win95-border-light);
+        border-left: 1px solid var(--win95-border-light);
+        border-bottom: 1px solid var(--win95-border-black);
+        border-right: 1px solid var(--win95-border-black);
+    }
+
+    /* Contenido Estilizado como Celdas Retro */
+    .cv-content {
+        flex-grow: 1;
+        min-height: calc(500 * 35px); /* Forza la grilla a bajar 500 filas igual que los números */
+        background-color: var(--excel-cell-bg);
+        background-image: 
+            linear-gradient(#c0c0c0 1px, transparent 1px),
+            linear-gradient(90deg, #c0c0c0 1px, transparent 1px);
+        background-size: 100px 35px;
+        padding: 0; /* Cero padding para que alinee exacto con la grilla */
+        border-top: 2px inset var(--win95-border-dark);
+        border-left: 2px inset var(--win95-border-dark);
+        position: relative;
+    }
+
+    .sheet-section {
+        background-color: #e8f5e9; /* Tono verde muy claro 1 */
+        margin: 35px 0 35px 100px; /* 1 fila top/bottom, 1 columna (100px) izq */
+        padding: 0 10px; /* Separación horizontal para no pegarse a la línea */
+        outline: 2px solid transparent;
+        outline-offset: -2px; /* El outline no rompe la grilla */
+        transition: none; /* Sin animaciones en los 90s! */
+        max-width: 800px;
+    }
+
+    .sheet-section:nth-of-type(even) {
+        background-color: #dcedc8; /* Tono verde muy claro 2 */
+    }
+
+    .sheet-section:nth-of-type(3n) {
+        background-color: #f1f8e9; /* Tono verde muy claro 3 */
+    }
+
+    .sheet-section:hover, .sheet-section.selected {
+        outline: 2px solid var(--excel-text); /* Borde negro de celda seleccionada */
+        background-color: rgba(0, 0, 0, 0.05); /* Efecto de selección retro */
+    }
+
+    /* Tipografía Retro alineada a celdas de 35px */
+    h1 { font-size: 20px; font-weight: bold; margin-bottom: 0; line-height: 35px; }
+    h2 { font-size: 14px; font-weight: bold; margin-bottom: 0; line-height: 35px; }
+    h3 { 
+        font-size: 12px; 
+        font-weight: bold; 
+        border-bottom: 1px solid var(--excel-text); 
+        display: inline-block; 
+        margin-bottom: 0; 
+        line-height: 34px; /* Ajuste para el borde */
+        text-transform: uppercase; 
+    }
+    h4 { font-size: 12px; font-weight: bold; margin-top: 0; margin-bottom: 0; line-height: 35px; }
+    p, ul { font-size: 12px; line-height: 35px; margin-bottom: 0; }
+    ul { padding-left: 30px; }
+    li { line-height: 35px; margin-bottom: 0; }
+    a { color: var(--excel-green); text-decoration: underline; font-weight: bold; }
+    a:visited { color: var(--excel-green); }
+
+    /* Footer / Pestañas */
+    .excel-footer {
+        height: 25px;
+        background-color: var(--win95-bg);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 2px solid var(--win95-border-light);
+    }
+
+    .sheet-tabs {
+        display: flex;
+        align-items: center;
+        height: 100%;
+    }
+
+    .sheet-tab {
+        border-top: 2px solid var(--win95-border-light);
+        border-left: 2px solid var(--win95-border-light);
+        border-bottom: 1px solid var(--win95-border-dark);
+        border-right: 1px solid var(--win95-border-dark);
+        background-color: var(--win95-bg);
+        padding: 0 15px;
+        height: 22px;
+        font-family: inherit;
+        font-size: 12px;
+        cursor: default;
+        margin-top: 3px;
+        margin-right: 2px;
+        border-radius: 4px 4px 0 0;
+    }
+
+    .sheet-tab.active {
+        background-color: white;
+        border-bottom: none;
+        height: 25px;
+        margin-top: 0;
+        font-weight: bold;
+    }
+}
+
+/* =========================================
+   IMPRESIÓN (PDF / ATS-Friendly) - INTACTO
+   ========================================= */
+@media print {
+    .screen-only { display: none !important; }
+    body {
+        height: auto; overflow: visible; background-color: white; color: black;
+        font-family: Arial, Helvetica, sans-serif; font-size: 11pt; line-height: 1.5;
+    }
+    .excel-grid, .cv-content, .sheet-section {
+        display: block; background: none; padding: 0; border: none; box-shadow: none; margin-bottom: 15pt;
+    }
+    h1 { font-size: 24pt; text-align: center; margin-bottom: 5pt; }
+    h2 { font-size: 14pt; text-align: center; margin-bottom: 10pt; }
+    address { text-align: center; margin-bottom: 20pt; }
+    h3 { font-size: 13pt; border-bottom: 1pt solid black; margin-bottom: 10pt; text-transform: uppercase; padding-bottom: 2pt; }
+    h4 { font-size: 12pt; margin-bottom: 5pt; }
+    ul { padding-left: 20pt; margin-bottom: 10pt; }
+    a { color: black; text-decoration: none; }
+    * { box-shadow: none !important; text-shadow: none !important; }
+}

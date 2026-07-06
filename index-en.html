@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Javier Zaia - Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Classic office font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- EXCEL UI (Screen only) -->
+    <div class="excel-ui-header screen-only">
+        <div class="window-title-bar">
+            <span>Microsoft Excel - CV_Javier_Zaia_EN.xls</span>
+            <div class="window-controls">
+                <a href="index.html" class="win95-button" style="text-decoration:none; color:black; margin-right: 15px;">🇪🇸 Español</a>
+                <button class="win95-button">_</button>
+                <button class="win95-button">□</button>
+                <button class="win95-button">X</button>
+            </div>
+        </div>
+        <div class="ribbon">
+            <div class="ribbon-tab active">File</div>
+            <div class="ribbon-tab">Edit</div>
+            <div class="ribbon-tab">View</div>
+            <div class="ribbon-tab">Insert</div>
+            <div class="ribbon-tab">Format</div>
+        </div>
+        <div class="formula-bar">
+            <div class="cell-name">A1</div>
+            <div class="fx-icon">fx</div>
+            <div class="formula-input">=VLOOKUP("C# Developer"; "Javier Zaia")</div>
+        </div>
+        <div class="col-headers">
+            <div class="corner"></div>
+            <div class="col-header">A</div>
+            <div class="col-header">B</div>
+            <div class="col-header">C</div>
+            <div class="col-header">D</div>
+            <div class="col-header">E</div>
+            <div class="col-header">F</div>
+            <div class="col-header">G</div>
+        </div>
+    </div>
+
+    <div class="excel-grid">
+        <!-- Dynamic row numbers -->
+        <div class="row-numbers screen-only" id="rowNumbers">
+            <!-- Handled by JavaScript -->
+        </div>
+
+        <!-- REAL CONTENT (ATS-Friendly CV) -->
+        <main class="cv-content">
+            <header class="sheet-section">
+                <h1>Javier Zaia</h1>
+                <h2>Full Stack Developer</h2>
+                <address>
+                    San Miguel de Tucumán, Argentina<br>
+                    <a href="mailto:zaiajavier1@gmail.com">zaiajavier1@gmail.com</a> |
+                    <a href="https://github.com/Jvier-Zaia" target="_blank">GitHub: Jvier-Zaia</a>
+                </address>
+            </header>
+
+            <section id="perfil" class="sheet-section">
+                <h3>Professional Summary</h3>
+                <p>Full Stack Developer and student of the University Degree in Programming (TUP) at UTN. Experience in cross-platform application development, enterprise desktop systems (POS), and automation (RPA). Driven by solving business problems through scalable architectures in Python, C# (.NET), and modern web technologies. Previous experience in customer service and cashier operations has provided a solid foundation in real-time problem solving and an understanding of business logic applied to software.</p>
+            </section>
+
+            <section id="habilidades" class="sheet-section">
+                <h3>Technical Skills</h3>
+                <ul>
+                    <li><strong>Programming Languages:</strong> Python, C#, TypeScript, JavaScript, SQL.</li>
+                    <li><strong>Backend & Databases:</strong> .NET, Node.js, FastAPI, SQLite, Pandas.</li>
+                    <li><strong>Frontend & UI:</strong> React, Tailwind CSS, Bootstrap, HTML/CSS, Avalonia UI, Android.</li>
+                    <li><strong>Tools & Concepts:</strong> Git, Web Scraping (Selenium, BeautifulSoup), RPA, PID Control, OOP, Design Patterns.</li>
+                    <li><strong>Languages:</strong> English (B1+ Level), Spanish (Native).</li>
+                </ul>
+            </section>
+
+            <section id="proyectos" class="sheet-section">
+                <h3>Software Projects</h3>
+                <article>
+                    <h4>P3 Player (Jupyter Neon Mobile)</h4>
+                    <p><em>Technologies: C#, .NET, Avalonia UI, Android</em></p>
+                    <ul>
+                        <li>Developed a native Android media player with real-time procedural graphics generation (nebulas).</li>
+                        <li>Designed native Foreground Services (Media3) to ensure background playback and lock-screen notification control.</li>
+                        <li>Implemented a custom user interface and playback controls using Avalonia UI on the .NET ecosystem.</li>
+                    </ul>
+                </article>
+                
+                <article>
+                    <h4>POS & Accounting Management System</h4>
+                    <p><em>Technologies: Python, Tkinter, SQLite, Pandas, Matplotlib</em></p>
+                    <ul>
+                        <li>Created an end-to-end desktop application for point of sale and inventory management in enterprise environments.</li>
+                        <li>Developed an integrated Business Intelligence module that generates dynamic charts and exports structured financial reports to Excel.</li>
+                        <li>Optimized database queries to efficiently handle large volumes of transactions and supplier data.</li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h4>Gem SCADA Simulator & Moodle Bot</h4>
+                    <p><em>Technologies: Python, Curses, Selenium, RPA</em></p>
+                    <ul>
+                        <li>Designed an interactive console-based industrial simulator ("Digital Twin") with a custom-built mathematical PID Controller.</li>
+                        <li>Developed a Robotic Process Automation (RPA) bot capable of navigating complex educational platforms to massively consolidate study materials.</li>
+                    </ul>
+                </article>
+            </section>
+            
+            <section id="experiencia" class="sheet-section">
+                <h3>Work Experience</h3>
+                <article>
+                    <h4>Customer Service & Cashier Control</h4>
+                    <p><em>San Miguel de Tucumán</em></p>
+                    <ul>
+                        <li>Responsible for cashier operations, daily balancing, and reconciliation, ensuring precision in financial transactions.</li>
+                        <li>Direct customer service, conflict resolution, and user experience optimization at the point of sale.</li>
+                        <li>This hands-on commercial experience was key for the logical design and user interface of my "POS System".</li>
+                    </ul>
+                </article>
+            </section>
+
+            <section id="educacion" class="sheet-section">
+                <h3>Education</h3>
+                <article>
+                    <h4>University Degree in Programming (TUP)</h4>
+                    <p>Universidad Tecnológica Nacional (UTN) | <em>2026 - Present</em></p>
+                </article>
+                <article>
+                    <h4>Official Frontend Development Certification</h4>
+                    <p>Universidad Tecnológica Nacional (UTN) | <em>2025</em></p>
+                    <p><a href="https://validator.centrodeelearning.com/validator/MysMjYEVnL" target="_blank" style="font-weight: 500;">View Credential (UTN Validator) 🔗</a></p>
+                </article>
+            </section>
+        </main>
+    </div>
+
+    <!-- Bottom tabs (Excel Footer) -->
+    <footer class="excel-footer screen-only">
+        <div class="sheet-tabs">
+            <button class="sheet-tab active">Main_CV</button>
+            <button class="sheet-tab">Sheet2</button>
+            <button class="sheet-tab">+</button>
+        </div>
+        <div class="zoom-controls">
+            <span>Normal</span>
+            <span>100%</span>
+            <span>- OR +</span>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
